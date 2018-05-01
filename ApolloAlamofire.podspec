@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/explicitcall/ApolloAlamofire'
+  s.homepage         = 'https://github.com/maxdesiatov/ApolloAlamofire'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'explicitcall' => 'max.desiatov@gmail.com' }
+  s.author           = { 'Max Desiatov' => 'max.desiatov@gmail.com' }
   s.source           = { :git => 'https://github.com/explicitcall/ApolloAlamofire.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

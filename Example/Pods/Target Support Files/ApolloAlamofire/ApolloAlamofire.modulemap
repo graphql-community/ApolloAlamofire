@@ -1,0 +1,6 @@
+framework module ApolloAlamofire {
+  umbrella header "ApolloAlamofire-umbrella.h"
+
+  export *
+  module * { export * }
+}

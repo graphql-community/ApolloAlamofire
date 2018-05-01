@@ -1,0 +1,16 @@
+PODS:
+  - ApolloAlamofire (0.1.0)
+
+DEPENDENCIES:
+  - ApolloAlamofire (from `../`)
+
+EXTERNAL SOURCES:
+  ApolloAlamofire:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ApolloAlamofire: 0d47b96627e78b34b48dbee75825f08e2f0ce9db
+
+PODFILE CHECKSUM: c872fbda2cfacbfd2eeae25af342386e2042ccf0
+
+COCOAPODS: 1.5.0
