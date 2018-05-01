@@ -9,7 +9,7 @@ import Foundation
 import Apollo
 import Alamofire
 
-class AlamofireTransport: NetworkTransport {
+public class AlamofireTransport: NetworkTransport {
   let sessionManager: SessionManager
   let url: URL
   let headers: HTTPHeaders?
