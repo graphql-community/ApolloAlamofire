@@ -22,7 +22,7 @@ pod 'ApolloAlamofire'
 
 ## Author
 
-explicitcall, max.desiatov@gmail.com
+Max Desiatov
 
 ## License
 
