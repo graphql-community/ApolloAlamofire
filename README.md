@@ -1,6 +1,6 @@
 # ApolloAlamofire
 
-[![CI Status](https://img.shields.io/travis/explicitcall/ApolloAlamofire.svg?style=flat)](https://travis-ci.org/explicitcall/ApolloAlamofire)
+[![CI Status](https://img.shields.io/travis/maxdesiatov/ApolloAlamofire.svg?style=flat)](https://travis-ci.org/maxdesiatov/ApolloAlamofire)
 [![Version](https://img.shields.io/cocoapods/v/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![License](https://img.shields.io/cocoapods/l/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![Platform](https://img.shields.io/cocoapods/p/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
