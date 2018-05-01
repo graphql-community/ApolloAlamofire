@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ApolloAlamofire_Tests' do
+  pod 'ApolloAlamofire', :path => '../'
+  
+  
+end
