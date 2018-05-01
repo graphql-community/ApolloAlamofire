@@ -15,7 +15,7 @@ public class AlamofireTransport: NetworkTransport {
   let headers: HTTPHeaders?
   let loggingEnabled: Bool
 
-  init(url: URL, sessionManager: SessionManager = SessionManager.default,
+  public init(url: URL, sessionManager: SessionManager = SessionManager.default,
        headers: HTTPHeaders? = nil, loggingEnabled: Bool = false) {
     self.sessionManager = sessionManager
     self.url = url
@@ -23,7 +23,7 @@ public class AlamofireTransport: NetworkTransport {
     self.loggingEnabled = loggingEnabled
   }
 
-  func send<Operation>(operation: Operation,
+  public func send<Operation>(operation: Operation,
   completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> Void)
   -> Cancellable where Operation: GraphQLOperation {
     let vars = operation.variables?.mapValues { $0?.jsonValue } as Any
