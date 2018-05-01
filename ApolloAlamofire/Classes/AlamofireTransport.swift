@@ -41,8 +41,9 @@ class AlamofireTransport: NetworkTransport {
           guard let value = value as? JSONObject else {
             throw response.error!
           }
-          if self.loggingEnabled, let data = response.data {
-            print(String(data: data, encoding: .utf8))
+          if self.loggingEnabled, let data = response.data,
+          let str = String(data: data, encoding: .utf8) {
+            print(str)
           }
           return GraphQLResponse(operation: operation, body: value)
       }

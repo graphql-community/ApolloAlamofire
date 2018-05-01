@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApolloAlamofire'
-  s.version          = '0.1.1'
-  s.summary          = 'A short description of ApolloAlamofire.'
+  s.version          = '0.1.2'
+  s.summary          = 'Alamofire transport for Apollo iOS GraphQL library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,8 +17,9 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
+  s.swift_version    = '4.1'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Alamofire transport for Apollo iOS GraphQL library
                        DESC
 
   s.homepage         = 'https://github.com/maxdesiatov/ApolloAlamofire'
