@@ -16,12 +16,13 @@ provided with the library:
 * [Can't log request/response data](https://github.com/apollographql/apollo-ios/pull/257)
 
 Fortunately, Apollo iOS provides a public `NetworkTransport` protocol that allows 
-overcoming these limitations. Given that [Alamofire](https://github.com/Alamofire/Alamofire)
-is the most popular iOS networking library , and you probably use it anyway to authenticate
-with your GraphQL API, it makes sense to integrate both Alamofire and Apollo iOS.
+overcoming these limitations. Looks like [Alamofire](https://github.com/Alamofire/Alamofire)
+is the most popular iOS networking library and all of the mentioned limitations can be solved 
+with it. You also probably use Alamofire anyway to acquire authentication tokens for your 
+GraphQL API, so it makes sense to integrate both Alamofire and Apollo iOS
 
-All of the mentioned limitations can be solved with Alamofire and are bundled with this 
-package.
+This package bundles a  `NetworkTransport` implementation that wraps Alamofire
+and solves the mentioned limitations.
 
 ## Example
 
