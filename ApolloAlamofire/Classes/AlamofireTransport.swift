@@ -2,13 +2,15 @@
 //  AlamofireTransport.swift
 //
 //  Created by Max Desiatov on 1/05/2018.
-//  Copyright © 2018 Max Desiatov. All rights reserved.
+//  Copyright © 2018 Max Desiatov
 //
 
 import Foundation
 import Apollo
 import Alamofire
 
+/// A network transport that uses HTTP POST requests to send GraphQL operations to a server,
+/// and that uses `Alamofire.SessionManager` as the networking implementation.
 public class AlamofireTransport: NetworkTransport {
   let sessionManager: SessionManager
   let url: URL
