@@ -76,6 +76,12 @@ let t = AlamofireTransport(url: u, loggingEnabled: true)
 let client = ApolloClient(networkTransport: t)
 ```
 
+Both `headers` and `loggingEnabled` are also variable properties of `AlamofireTransport`.
+This allows you to change headers without instantiating a new transport, e.g. when a user
+logs out and a different user logs in you can swap authentication headers. If you switch 
+logging dynamically, `loggingEnabled` property can be controlled in the same way 
+without creating a new `AlamofireTransport` instance.
+
 Nice feature of Alamofire is that request logging prints a ready for use 
 [curl command](https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md#curl-command-output), which you can directly copy and paste in terminal to test a request.
 
