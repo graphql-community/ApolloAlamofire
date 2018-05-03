@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
 
   s.swift_version    = '4.1'
   s.description      = <<-DESC
-Alamofire transport for Apollo iOS GraphQL library
+This package bundles a `NetworkTransport` implementation that wraps Alamofire
+and solves known limitations of Apollo iOS library.
                        DESC
 
   s.homepage         = 'https://github.com/maxdesiatov/ApolloAlamofire'

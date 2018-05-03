@@ -21,7 +21,7 @@ is the most popular iOS networking library and all of the mentioned limitations 
 with it. You also probably use Alamofire anyway to acquire authentication tokens for your 
 GraphQL API, so it makes sense to integrate both Alamofire and Apollo iOS.
 
-This package bundles a  `NetworkTransport` implementation that wraps Alamofire
+This package bundles a `NetworkTransport` implementation that wraps Alamofire
 and solves these limitations.
 
 ## Example
