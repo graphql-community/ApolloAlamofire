@@ -12,8 +12,8 @@ import Alamofire
 public class AlamofireTransport: NetworkTransport {
   let sessionManager: SessionManager
   let url: URL
-  let headers: HTTPHeaders?
-  let loggingEnabled: Bool
+  public var headers: HTTPHeaders?
+  public var loggingEnabled: Bool
 
   public init(url: URL, sessionManager: SessionManager = SessionManager.default,
        headers: HTTPHeaders? = nil, loggingEnabled: Bool = false) {
@@ -33,7 +33,7 @@ public class AlamofireTransport: NetworkTransport {
                encoding: JSONEncoding.default, headers: headers)
       .validate(statusCode: [200])
     if loggingEnabled {
-    debugPrint(request)
+      debugPrint(request)
     }
     return request.responseJSON { response in
       let gqlResult = response.result

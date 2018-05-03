@@ -16,5 +16,11 @@ class Tests: XCTestCase {
     let u = URL(string: "http://google.com")!
     let transport = AlamofireTransport(url: u)
     XCTAssertEqual(u, transport.url)
+    XCTAssertNil(transport.headers)
+    XCTAssertFalse(transport.loggingEnabled)
+    transport.headers = [:]
+    XCTAssertEqual(transport.headers, [:])
+    transport.loggingEnabled = true
+    XCTAssertTrue(transport.loggingEnabled)
   }
 }
