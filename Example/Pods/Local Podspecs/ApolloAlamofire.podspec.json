@@ -1,22 +1,31 @@
 {
   "name": "ApolloAlamofire",
-  "version": "0.1.0",
-  "summary": "A short description of ApolloAlamofire.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/explicitcall/ApolloAlamofire",
+  "version": "0.1.5",
+  "summary": "Alamofire transport for Apollo iOS GraphQL library",
+  "swift_version": "4.1",
+  "description": "Alamofire transport for Apollo iOS GraphQL library",
+  "homepage": "https://github.com/maxdesiatov/ApolloAlamofire",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "explicitcall": "max.desiatov@gmail.com"
+    "Max Desiatov": "max.desiatov@gmail.com"
   },
   "source": {
-    "git": "https://github.com/explicitcall/ApolloAlamofire.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/maxdesiatov/ApolloAlamofire.git",
+    "tag": "0.1.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "ApolloAlamofire/Classes/**/*"
+  "source_files": "ApolloAlamofire/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4"
+    ],
+    "Apollo": [
+      "~> 0.8"
+    ]
+  }
 }
