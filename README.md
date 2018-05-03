@@ -27,11 +27,13 @@ package.
 
 When initialising a new `ApolloClient` instance instead of
 ```swift
-let client = ApolloClient(url: URL(string: "http://localhost:8080/graphql")!)
+let u = URL(string: "http://localhost:8080/graphql")!
+let client = ApolloClient(url: u)
 ```
 or instead of
 ```swift
-let client = ApolloClient(networkTransport: HTTPNetworkTransport(url: URL(string: "http://localhost:8080/graphql")!))
+let u = URL(string: "http://localhost:8080/graphql")!
+let client = ApolloClient(networkTransport: HTTPNetworkTransport(url: u))
 ```
 
 use
@@ -40,17 +42,19 @@ use
 import ApolloAlamofire
 
 //...
-
-let client = ApolloClient(networkTransport: AlamofireTransport(url: URL(string: "http://localhost:8080/graphql")!))
+let u = URL(string: "http://localhost:8080/graphql")!
+let client = ApolloClient(networkTransport: AlamofireTransport(url: u))
 ```
 
 There are additional parameters available for `AlamofireTransport` initialiser, e.g. for 
 a background session you can use it like this:
 
 ```swift
-let configuration = URLSessionConfiguration.background(withIdentifier: "your-id")
-
-let client = ApolloClient(networkTransport: AlamofireTransport(url: URL(string: "http://localhost:8080/graphql")!, sessionManager: SessionManager(configuration: configuration)))
+let c = URLSessionConfiguration.background(withIdentifier: "your-id")
+let u = URL(string: "http://localhost:8080/graphql")!
+let s = SessionManager(configuration: c)
+let t = AlamofireTransport(url: u, sessionManager: s)
+let client = ApolloClient(networkTransport: transport)
 ```
 
 like this for auth headers:
@@ -58,14 +62,18 @@ like this for auth headers:
 
 ```swift
 let token = "blah"
-
-let client = ApolloClient(networkTransport: AlamofireTransport(url: URL(string: "http://localhost:8080/graphql")!, headers: ["Authorization": "Bearer \(token)"]))
+let u = URL(string: "http://localhost:8080/graphql")!
+let h = ["Authorization": "Bearer \(token)"]
+let t = AlamofireTransport(url: u, headers: h)
+let client = ApolloClient(networkTransport: t)
 ```
 
 or like this for request and response logging:
 
 ```swift
-let client = ApolloClient(networkTransport: AlamofireTransport(url: URL(string: "http://localhost:8080/graphql")!, loggingEnabled: true))
+let u = URL(string: "http://localhost:8080/graphql")!
+let t = AlamofireTransport(url: u, loggingEnabled: true)
+let client = ApolloClient(networkTransport: t)
 ```
 
 Nice feature of Alamofire is that request logging prints a ready for use 
