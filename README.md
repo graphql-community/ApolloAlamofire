@@ -19,10 +19,10 @@ Fortunately, Apollo iOS provides a public `NetworkTransport` protocol that allow
 us to override behaviour that's limited. Looks like [Alamofire](https://github.com/Alamofire/Alamofire)
 is the most popular iOS networking library and all of the mentioned limitations can be solved 
 with it. You also probably use Alamofire anyway to acquire authentication tokens for your 
-GraphQL API, so it makes sense to integrate both Alamofire and Apollo iOS
+GraphQL API, so it makes sense to integrate both Alamofire and Apollo iOS.
 
 This package bundles a  `NetworkTransport` implementation that wraps Alamofire
-and solves the mentioned limitations.
+and solves these limitations.
 
 ## Example
 
