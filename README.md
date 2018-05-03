@@ -55,7 +55,7 @@ let c = URLSessionConfiguration.background(withIdentifier: "your-id")
 let u = URL(string: "http://localhost:8080/graphql")!
 let s = SessionManager(configuration: c)
 let t = AlamofireTransport(url: u, sessionManager: s)
-let client = ApolloClient(networkTransport: transport)
+let client = ApolloClient(networkTransport: t)
 ```
 
 like this for auth headers:
@@ -104,7 +104,7 @@ and Apollo iOS 0.8.x.
 ## Installation
 
 ApolloAlamofire is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your target configuration in your Podfile:
 
 ```ruby
 pod 'ApolloAlamofire'
