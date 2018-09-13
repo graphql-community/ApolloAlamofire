@@ -9,8 +9,9 @@ import Foundation
 import Apollo
 import Alamofire
 
-/// A network transport that uses HTTP POST requests to send GraphQL operations to a server,
-/// and that uses `Alamofire.SessionManager` as the networking implementation.
+/// A network transport that uses HTTP POST requests to send GraphQL operations
+/// to a server, and that uses `Alamofire.SessionManager` as the networking
+/// implementation.
 public class AlamofireTransport: NetworkTransport {
   let sessionManager: SessionManager
   let url: URL
@@ -28,8 +29,11 @@ public class AlamofireTransport: NetworkTransport {
   public func send<Operation>(operation: Operation,
   completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> Void)
   -> Cancellable where Operation: GraphQLOperation {
-    let vars = operation.variables?.mapValues { $0?.jsonValue } as Any
-    let body = ["query": type(of: operation).requestString, "variables": vars]
+    let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue } 
+    let body: Parameters = [
+      "query": operation.queryDocument,
+      "variables": vars
+    ]
     let request = sessionManager
       .request(url, method: .post, parameters: body,
                encoding: JSONEncoding.default, headers: headers)

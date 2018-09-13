@@ -1,9 +1,9 @@
 {
   "name": "ApolloAlamofire",
-  "version": "0.1.5",
+  "version": "0.3.0",
   "summary": "Alamofire transport for Apollo iOS GraphQL library",
   "swift_version": "4.1",
-  "description": "Alamofire transport for Apollo iOS GraphQL library",
+  "description": "This package bundles a `NetworkTransport` implementation that wraps Alamofire\nand solves known limitations of Apollo iOS library.",
   "homepage": "https://github.com/maxdesiatov/ApolloAlamofire",
   "license": {
     "type": "MIT",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/maxdesiatov/ApolloAlamofire.git",
-    "tag": "0.1.5"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "9.0"
@@ -25,7 +25,7 @@
       "~> 4"
     ],
     "Apollo": [
-      "~> 0.8"
+      "~> 0.9"
     ]
   }
 }

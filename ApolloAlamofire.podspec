@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApolloAlamofire'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'Alamofire transport for Apollo iOS GraphQL library'
 
 # This description is used to generate tags and improve search results.
@@ -41,5 +41,5 @@ and solves known limitations of Apollo iOS library.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Alamofire', '~> 4'
-  s.dependency 'Apollo', '~> 0.8'
+  s.dependency 'Apollo', '~> 0.9'
 end
