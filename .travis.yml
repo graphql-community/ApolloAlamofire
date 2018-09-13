@@ -11,4 +11,5 @@ language: objective-c
 # - pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/ApolloAlamofire.xcworkspace -scheme ApolloAlamofire-Example -sdk iphonesimulator11.3 ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,OS=11.3,name=iPhone SE' | xcpretty
+- pod repo update
 - pod lib lint --allow-warnings
