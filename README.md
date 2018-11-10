@@ -1,5 +1,7 @@
 # ApolloAlamofire
 
+### Alamofire transport implementation for Apollo GraphQL iOS library. 
+
 [![CI Status](https://img.shields.io/travis/MaxDesiatov/ApolloAlamofire.svg?style=flat)](https://travis-ci.org/MaxDesiatov/ApolloAlamofire)
 [![Version](https://img.shields.io/cocoapods/v/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![License](https://img.shields.io/cocoapods/l/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
