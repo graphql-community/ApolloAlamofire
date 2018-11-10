@@ -101,7 +101,7 @@ Feel free to submit a PR to enable a better [Travis CI testing matrix](https://g
 
 If you integrate the library with CocoaPods, Alamofire and Apollo iOS dependencies are 
 pulled automatically. Currently tested versions that should be compatible are Alamofire 4.x
-and Apollo iOS 0.8.x.
+and Apollo iOS 0.9.x.
 
 ## Installation
 
