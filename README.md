@@ -114,7 +114,7 @@ pod 'ApolloAlamofire'
 
 ## Author
 
-Max Desiatov
+[Max Desiatov](https://desiatov.com)
 
 ## License
 
