@@ -2,7 +2,7 @@
 
 ### Alamofire transport implementation for Apollo GraphQL iOS library. 
 
-[![CI Status](https://img.shields.io/travis/MaxDesiatov/ApolloAlamofire.svg?style=flat)](https://travis-ci.org/MaxDesiatov/ApolloAlamofire)
+[![CI Status](https://img.shields.io/travis/graphql-community/ApolloAlamofire.svg?style=flat)](https://travis-ci.org/MaxDesiatov/ApolloAlamofire)
 [![Version](https://img.shields.io/cocoapods/v/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![License](https://img.shields.io/cocoapods/l/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![Platform](https://img.shields.io/cocoapods/p/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
@@ -97,7 +97,7 @@ To run the example project, clone the repo, and open `Example/ApolloAlamofire.xc
 
 The library is tested with Xcode 9.3 and Swift 4.1. It should compile in any other version of
 Xcode 9 and should be compatible with Swift 4.0, but is not tested with those version. 
-Feel free to submit a PR to enable a better [Travis CI testing matrix](https://github.com/maxdesiatov/ApolloAlamofire/blob/master/.travis.yml).
+Feel free to submit a PR to enable a better [Travis CI testing matrix](https://github.com/graphql-community/ApolloAlamofire/blob/master/.travis.yml).
 
 If you integrate the library with CocoaPods, Alamofire and Apollo iOS dependencies are 
 pulled automatically. Currently tested versions that should be compatible are Alamofire 4.x
@@ -112,7 +112,7 @@ it, simply add the following line to your target configuration in your Podfile:
 pod 'ApolloAlamofire'
 ```
 
-## Author
+## Maintainer
 
 [Max Desiatov](https://desiatov.com)
 
