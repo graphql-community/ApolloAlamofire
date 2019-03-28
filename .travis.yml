@@ -2,12 +2,6 @@
 # * https://www.objc.io/issues/6-build-tools/travis-ci/
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: 
-- xcode9.3
-- xcode9.4
-- xcode10.0
-- xcode10.1
-- xcode10.2
 language: swift
 
 matrix:
