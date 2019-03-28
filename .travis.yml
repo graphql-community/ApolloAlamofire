@@ -9,6 +9,20 @@ osx_image:
 - xcode10.1
 - xcode10.2
 language: swift
+
+matrix:
+  include:
+  - osx_image: xcode9.3
+    env: TEST_DEVICE='platform=iOS Simulator,OS=11.3,name=iPhone SE'
+  - osx_image: xcode9.4
+    env: TEST_DEVICE='platform=iOS Simulator,OS=11.4,name=iPhone SE'
+  - osx_image: xcode10.0
+    env: TEST_DEVICE='platform=iOS Simulator,OS=12.0,name=iPhone SE'
+  - osx_image: xcode10.1
+    env: TEST_DEVICE='platform=iOS Simulator,OS=12.1,name=iPhone SE'
+  - osx_image: xcode10.2
+    env: TEST_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
+
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
@@ -18,6 +32,6 @@ script:
 - > 
   set -o pipefail && xcodebuild test -enableCodeCoverage YES 
   -workspace Example/ApolloAlamofire.xcworkspace -scheme ApolloAlamofire-Example 
-  -sdk iphonesimulator | xcpretty
+  -sdk iphonesimulator -destination $TEST_DEVICE | xcpretty
 - pod repo update
 - pod lib lint --allow-warnings
