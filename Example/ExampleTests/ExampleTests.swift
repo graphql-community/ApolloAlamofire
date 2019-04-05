@@ -6,8 +6,8 @@
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
-import XCTest
 @testable import ApolloAlamofire
+import XCTest
 
 class ExampleTests: XCTestCase {
   override func setUp() {
