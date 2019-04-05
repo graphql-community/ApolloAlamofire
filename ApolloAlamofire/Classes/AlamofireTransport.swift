@@ -5,9 +5,9 @@
 //  Copyright © 2018 Max Desiatov
 //
 
-import Foundation
-import Apollo
 import Alamofire
+import Apollo
+import Foundation
 
 /// A network transport that uses HTTP POST requests to send GraphQL operations
 /// to a server, and that uses `Alamofire.SessionManager` as the networking
@@ -19,20 +19,22 @@ public class AlamofireTransport: NetworkTransport {
   public var loggingEnabled: Bool
 
   public init(url: URL, sessionManager: SessionManager = SessionManager.default,
-       headers: HTTPHeaders? = nil, loggingEnabled: Bool = false) {
+              headers: HTTPHeaders? = nil, loggingEnabled: Bool = false) {
     self.sessionManager = sessionManager
     self.url = url
     self.headers = headers
     self.loggingEnabled = loggingEnabled
   }
 
-  public func send<Operation>(operation: Operation,
-  completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> Void)
-  -> Cancellable where Operation: GraphQLOperation {
-    let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue } 
+  public func send<Operation>(
+    operation: Operation,
+    completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> ()
+  )
+    -> Cancellable where Operation: GraphQLOperation {
+    let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue }
     let body: Parameters = [
       "query": operation.queryDocument,
-      "variables": vars
+      "variables": vars,
     ]
     let request = sessionManager
       .request(url, method: .post, parameters: body,
@@ -48,11 +50,11 @@ public class AlamofireTransport: NetworkTransport {
             throw response.error!
           }
           if self.loggingEnabled, let data = response.data,
-          let str = String(data: data, encoding: .utf8) {
+            let str = String(data: data, encoding: .utf8) {
             print(str)
           }
           return GraphQLResponse(operation: operation, body: value)
-      }
+        }
       completionHandler(gqlResult.value, gqlResult.error)
     }.task!
   }
