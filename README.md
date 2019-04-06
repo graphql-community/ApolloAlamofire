@@ -95,13 +95,12 @@ To run the example project, clone the repo, and open `Example/ApolloAlamofire.xc
 
 ## Requirements
 
-The library is tested with Xcode 9.3 and Swift 4.1. It should compile in any other version of
-Xcode 9 and should be compatible with Swift 4.0, but is not tested with those version. 
-Feel free to submit a PR to enable a better [Travis CI testing matrix](https://github.com/graphql-community/ApolloAlamofire/blob/master/.travis.yml).
+* Xcode 10.0 or later
+* Swift 4.2 or later
 
 If you integrate the library with CocoaPods, Alamofire and Apollo iOS dependencies are 
 pulled automatically. Currently tested versions that should be compatible are Alamofire 4.x
-and Apollo iOS 0.9.x.
+and Apollo iOS 0.10.x.
 
 ## Installation
 
