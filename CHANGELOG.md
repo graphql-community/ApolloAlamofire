@@ -13,7 +13,6 @@ Xcode 9 support.
 **Closed issues:**
 
 - Xcode 10.2 & Swift 5.0 compatibility [\#2](https://github.com/graphql-community/ApolloAlamofire/issues/2)
-- Error in compilation [\#1](https://github.com/graphql-community/ApolloAlamofire/issues/1)
 
 **Merged pull requests:**
 
@@ -23,6 +22,10 @@ Xcode 9 support.
 ## [0.3.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.3.0) (2018-09-13)
 
 - Updated project for Swift 4.2 and Apollo 0.9.
+
+**Closed issues:**
+
+- Error in compilation [\#1](https://github.com/graphql-community/ApolloAlamofire/issues/1)
 
 ## [0.2.1](https://github.com/graphql-community/ApolloAlamofire/tree/0.2.1) (2018-05-03)
 
