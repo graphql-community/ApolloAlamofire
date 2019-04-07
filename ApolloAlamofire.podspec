@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApolloAlamofire'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'Alamofire transport for Apollo iOS GraphQL library'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.swift_version    = '4.1'
+  s.swift_version    = '4.2'
   s.description      = <<-DESC
 This package bundles a `NetworkTransport` implementation that wraps Alamofire
 and solves known limitations of Apollo iOS library.
