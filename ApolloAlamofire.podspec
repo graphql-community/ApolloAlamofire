@@ -33,13 +33,13 @@ and solves known limitations of Apollo iOS library.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'ApolloAlamofire/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'ApolloAlamofire' => ['ApolloAlamofire/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Alamofire', '~> 4'
-  s.dependency 'Apollo', '~> 0.10'
+  s.dependency 'Alamofire', '~> 4.8.2'
+  s.dependency 'Apollo', '~> 0.10.1'
 end
