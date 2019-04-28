@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.8.2"
+github "apollostack/apollo-ios" "0.10.1"
+github "daltoniam/Starscream" "3.1.0"
+github "stephencelis/SQLite.swift" "0.11.5"

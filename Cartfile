@@ -1,0 +1,2 @@
+github "apollostack/apollo-ios" ~> 0.10.1
+github "Alamofire/Alamofire" ~> 4.8.2
