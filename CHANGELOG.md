@@ -1,6 +1,14 @@
 # Change Log
 
-## [0.4.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.3.0) (2019-04-07)
+## [0.5.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.5.0) (2019-07-12)
+
+This release adds support for Carthage package manager.
+
+**Merged pull requests:**
+
+- Add Carthage support [\#5](https://github.com/graphql-community/ApolloAlamofire/pull/5) ([ciminuv](https://github.com/ciminuv))
+
+## [0.4.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.4.0) (2019-04-07)
 
 This update fixes compatibility with Xcode 10.2 and Swift 5.0. This release
 also supports Swift 4.2 and Xcode 10.0 and 10.1, but unfortunately maintaining

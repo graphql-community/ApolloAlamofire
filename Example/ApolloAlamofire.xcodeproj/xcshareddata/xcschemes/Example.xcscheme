@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D1B1658B22576F69007C3A96"
+               BlueprintIdentifier = "D1CB59852257749900A9CD7A"
                BuildableName = "Example.app"
                BlueprintName = "Example"
                ReferencedContainer = "container:ApolloAlamofire.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D1B1659E22576F69007C3A96"
+               BlueprintIdentifier = "D1CB59982257749A00A9CD7A"
                BuildableName = "ExampleTests.xctest"
                BlueprintName = "ExampleTests"
                ReferencedContainer = "container:ApolloAlamofire.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D1B1658B22576F69007C3A96"
+            BlueprintIdentifier = "D1CB59852257749900A9CD7A"
             BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:ApolloAlamofire.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D1B1658B22576F69007C3A96"
+            BlueprintIdentifier = "D1CB59852257749900A9CD7A"
             BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:ApolloAlamofire.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D1B1658B22576F69007C3A96"
+            BlueprintIdentifier = "D1CB59852257749900A9CD7A"
             BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:ApolloAlamofire.xcodeproj">

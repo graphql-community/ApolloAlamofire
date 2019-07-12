@@ -110,12 +110,64 @@ version of ApolloAlamofire: [0.3.0](https://github.com/graphql-community/ApolloA
 
 ## Installation
 
-ApolloAlamofire is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your target configuration in your Podfile:
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Swift and
+Objective-C Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+Navigate to the project directory and create `Podfile` with the following
+command:
+
+```bash
+$ pod install
+```
+
+Inside of your `Podfile`, specify the `ApolloAlamofire` pod:
 
 ```ruby
-pod 'ApolloAlamofire', '~> 0.4.0'
+pod 'ApolloAlamofire', '~> 0.5.0'
 ```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+Open the the `YourApp.xcworkspace` file that was created. This should be the
+file you use everyday to create your app, instead of the `YourApp.xcodeproj`
+file.
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a dependency manager that
+builds your dependencies and provides you with binary frameworks.
+
+Carthage can be installed with [Homebrew](https://brew.sh/) using the following
+command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+Inside of your `Cartfile`, add GitHub path to `ApolloAlamofire`:
+
+```ogdl
+github "graphql-community/ApolloAlamofire" ~> 0.7.0
+```
+
+Then, run the following command to build the framework:
+
+```bash
+$ carthage update
+```
+
+Drag the built framework into your Xcode project.
 
 ## Maintainer
 
