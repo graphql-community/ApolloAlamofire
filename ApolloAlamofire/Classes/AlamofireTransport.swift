@@ -26,9 +26,9 @@ public class AlamofireTransport: NetworkTransport {
     self.loggingEnabled = loggingEnabled
   }
 
-    public func send<Operation>(operation: Operation,
-                                completionHandler: @escaping (_ result: Swift.Result<Apollo.GraphQLResponse<Operation>, Error>) -> Void)
-        -> Cancellable where Operation : GraphQLOperation  {
+  public func send<Operation>(operation: Operation,
+                              completionHandler: @escaping (_ result: Swift.Result<Apollo.GraphQLResponse<Operation>, Error>) -> Void)
+      -> Cancellable where Operation : GraphQLOperation  {
     let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue }
     let body: Parameters = [
       "query": operation.queryDocument,
