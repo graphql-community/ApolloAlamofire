@@ -1,5 +1,5 @@
 # Only major and minor version should be specified here
-REQUIRED_APOLLO_CLI_VERSION=1.9
+REQUIRED_APOLLO_CLI_VERSION=2.16
 # Specify fully qualified version here. Ideally this should be a LTS version.
 REQUIRED_NODE_VERSION=8.15.0
 
@@ -15,6 +15,11 @@ APOLLO_CLI="npx --no-install apollo"
 if [[ -z "$CONFIGURATION" ]]; then
   echo "$0 must be invoked as part of an Xcode script phase"
   exit 1
+fi
+
+# Add MacPorts default bin path if the user has `port` command.
+if [[ -x /opt/local/bin/port ]]; then
+    PATH="$PATH:/opt/local/bin"
 fi
 
 use_correct_node_via_nvm() {

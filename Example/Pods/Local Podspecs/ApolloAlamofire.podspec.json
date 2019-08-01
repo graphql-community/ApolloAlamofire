@@ -2,7 +2,7 @@
   "name": "ApolloAlamofire",
   "version": "0.5.0",
   "summary": "Alamofire transport for Apollo iOS GraphQL library",
-  "swift_versions": "4.2",
+  "swift_version": "4.2",
   "description": "This package bundles a `NetworkTransport` implementation that wraps Alamofire\nand solves known limitations of Apollo iOS library.",
   "homepage": "https://github.com/graphql-community/ApolloAlamofire",
   "license": {
@@ -25,8 +25,7 @@
       "~> 4.8.2"
     ],
     "Apollo": [
-      "~> 0.10.1"
+      "~> 0.13.0"
     ]
-  },
-  "swift_version": "4.2"
+  }
 }

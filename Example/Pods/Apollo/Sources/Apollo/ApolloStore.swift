@@ -64,7 +64,7 @@ public final class ApolloStore {
         }.andThen { changedKeys in
           self.didChangeKeys(changedKeys, context: context)
           fulfill(())
-        }
+        }.wait()
       }
     }
   }
@@ -129,11 +129,11 @@ public final class ApolloStore {
     }
   }
 
-  public func load<Query: GraphQLQuery>(query: Query, resultHandler: @escaping OperationResultHandler<Query>) {
+  public func load<Query: GraphQLQuery>(query: Query, resultHandler: @escaping GraphQLResultHandler<Query.Data>) {
     load(query: query).andThen { result in
-      resultHandler(result, nil)
+      resultHandler(.success(result))
     }.catch { error in
-      resultHandler(nil, error)
+      resultHandler(.failure(error))
     }
   }
 
