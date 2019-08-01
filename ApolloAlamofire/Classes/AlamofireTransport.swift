@@ -26,11 +26,9 @@ public class AlamofireTransport: NetworkTransport {
     self.loggingEnabled = loggingEnabled
   }
 
-  public func send<Operation>(
-    operation: Operation,
-    completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> ()
-  )
-    -> Cancellable where Operation: GraphQLOperation {
+    public func send<Operation>(operation: Operation,
+                                completionHandler: @escaping (_ result: Swift.Result<Apollo.GraphQLResponse<Operation>, Error>) -> Void)
+        -> Cancellable where Operation : GraphQLOperation  {
     let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue }
     let body: Parameters = [
       "query": operation.queryDocument,
@@ -44,18 +42,23 @@ public class AlamofireTransport: NetworkTransport {
       debugPrint(request)
     }
     return request.responseJSON { response in
-      let gqlResult = response.result
-        .flatMap { value -> GraphQLResponse<Operation> in
-          guard let value = value as? JSONObject else {
-            throw response.error!
-          }
-          if self.loggingEnabled, let data = response.data,
-            let str = String(data: data, encoding: .utf8) {
-            print(str)
-          }
-          return GraphQLResponse(operation: operation, body: value)
+      switch response.result {
+        case .failure(let error):
+            completionHandler(.failure(error))
+        case .success(let data):
+            if self.loggingEnabled, let data = response.data,
+              let str = String(data: data, encoding: .utf8) {
+              print(str)
+            }
+
+            guard let value = data as? JSONObject else {
+              print("Response data not a JSONObject! ")
+              return
+            }
+            
+            let gqlResult = GraphQLResponse(operation: operation, body: value)
+            completionHandler(.success(gqlResult))
         }
-      completionHandler(gqlResult.value, gqlResult.error)
     }.task!
   }
 }
