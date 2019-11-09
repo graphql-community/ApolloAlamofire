@@ -17,18 +17,28 @@ public class AlamofireTransport: NetworkTransport {
   let url: URL
   public var headers: HTTPHeaders?
   public var loggingEnabled: Bool
+  public var clientName: String
+  public var clientVersion: String
 
-  public init(url: URL, sessionManager: SessionManager = SessionManager.default,
-              headers: HTTPHeaders? = nil, loggingEnabled: Bool = false) {
+  public init(
+    url: URL,
+    sessionManager: SessionManager = SessionManager.default,
+    headers: HTTPHeaders? = nil,
+    loggingEnabled: Bool = false,
+    clientName: String = "ApolloAlamofire",
+    clientVersion: String = "0.5.0"
+  ) {
     self.sessionManager = sessionManager
     self.url = url
     self.headers = headers
     self.loggingEnabled = loggingEnabled
+    self.clientName = clientName
+    self.clientVersion = clientVersion
   }
 
   public func send<Operation>(
     operation: Operation,
-    completionHandler: @escaping (GraphQLResponse<Operation>?, Error?) -> ()
+    completionHandler: @escaping (Swift.Result<GraphQLResponse<Operation>, Error>) -> ()
   )
     -> Cancellable where Operation: GraphQLOperation {
     let vars: JSONEncodable = operation.variables?.mapValues { $0?.jsonValue }
@@ -44,7 +54,7 @@ public class AlamofireTransport: NetworkTransport {
       debugPrint(request)
     }
     return request.responseJSON { response in
-      let gqlResult = response.result
+      let result = response.result
         .flatMap { value -> GraphQLResponse<Operation> in
           guard let value = value as? JSONObject else {
             throw response.error!
@@ -55,7 +65,13 @@ public class AlamofireTransport: NetworkTransport {
           }
           return GraphQLResponse(operation: operation, body: value)
         }
-      completionHandler(gqlResult.value, gqlResult.error)
+
+      switch result {
+      case let .failure(error):
+        completionHandler(.failure(error))
+      case let .success(value):
+        completionHandler(.success(value))
+      }
     }.task!
   }
 }

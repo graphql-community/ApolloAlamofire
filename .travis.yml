@@ -4,9 +4,9 @@
 
 matrix:
   include:
-    - osx_image: xcode10.2
+    - osx_image: xcode10.3
       language: swift
-      env: TEST_DEVICE='platform=iOS Simulator,OS=12.2,name=iPhone SE'
+      env: TEST_DEVICE='platform=iOS Simulator,OS=12.3,name=iPhone SE'
 
 # cache: cocoapods
 # podfile: Example/Podfile
