@@ -158,7 +158,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `ApolloAlamofire`:
 
 ```ogdl
-github "graphql-community/ApolloAlamofire" ~> 0.7.0
+github "graphql-community/ApolloAlamofire" ~> 0.5.0
 ```
 
 Then, run the following command to build the framework:
