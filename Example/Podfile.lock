@@ -3,7 +3,7 @@ PODS:
   - Apollo (0.19.0):
     - Apollo/Core (= 0.19.0)
   - Apollo/Core (0.19.0)
-  - ApolloAlamofire (0.5.0):
+  - ApolloAlamofire (0.6.0):
     - Alamofire (~> 4.9.1)
     - Apollo (~> 0.19.0)
 
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Apollo: 4f0fea775a98bba34935764e49d27f2d3b1a5f21
-  ApolloAlamofire: 450e37668e395d2e5e90d9c7ca5e285916479981
+  ApolloAlamofire: 85c6c4826f1c4e90e4e9b4476ac42b56b9e637a6
 
 PODFILE CHECKSUM: 3d8d02ef1af8e9f3ad5f5d2ba9652a1dafc83875
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ApolloAlamofire'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'Alamofire transport for Apollo iOS GraphQL library'
 
 # This description is used to generate tags and improve search results.

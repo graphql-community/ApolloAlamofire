@@ -129,7 +129,7 @@ $ pod install
 Inside of your `Podfile`, specify the `ApolloAlamofire` pod:
 
 ```ruby
-pod 'ApolloAlamofire', '~> 0.5.0'
+pod 'ApolloAlamofire', '~> 0.6.0'
 ```
 
 Then, run the following command:
@@ -158,7 +158,7 @@ $ brew install carthage
 Inside of your `Cartfile`, add GitHub path to `ApolloAlamofire`:
 
 ```ogdl
-github "graphql-community/ApolloAlamofire" ~> 0.5.0
+github "graphql-community/ApolloAlamofire" ~> 0.6.0
 ```
 
 Then, run the following command to build the framework:

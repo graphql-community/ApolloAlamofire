@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.6.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.6.0) (2019-11-09)
+
+This release updates Apollo dependency to 0.19.0 and Alamofire to 4.9.1.
+
+**Merged pull requests:**
+
+- Update dependencies, test with Xcode 10.3 [\#14](https://github.com/graphql-community/ApolloAlamofire/pull/14) ([MaxDesiatov](https://github.com/MaxDesiatov))
+
 ## [0.5.0](https://github.com/graphql-community/ApolloAlamofire/tree/0.5.0) (2019-07-12)
 
 This release adds support for Carthage package manager.
