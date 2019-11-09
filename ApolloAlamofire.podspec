@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.swift_version    = '4.2'
+  s.swift_versions    = ['4.2', '5.0', '5.1']
   s.description      = <<-DESC
 This package bundles a `NetworkTransport` implementation that wraps Alamofire
 and solves known limitations of Apollo iOS library.
@@ -40,6 +40,6 @@ and solves known limitations of Apollo iOS library.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Alamofire', '~> 4.8.2'
-  s.dependency 'Apollo', '~> 0.10.1'
+  s.dependency 'Alamofire', '~> 4.9.1'
+  s.dependency 'Apollo', '~> 0.19.0'
 end
