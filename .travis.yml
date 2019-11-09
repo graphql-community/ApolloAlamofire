@@ -12,5 +12,5 @@ cache: cocoapods
 podfile: Example/Podfile
 before_install:
   # - gem install cocoapods # Since Travis is not always on latest version
-  - pod install --project-directory=Example
+  - pod install --repo-update --project-directory=Example
 script: ./build.sh
