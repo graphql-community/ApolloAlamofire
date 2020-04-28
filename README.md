@@ -7,6 +7,10 @@
 [![License](https://img.shields.io/cocoapods/l/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 [![Platform](https://img.shields.io/cocoapods/p/ApolloAlamofire.svg?style=flat)](https://cocoapods.org/pods/ApolloAlamofire)
 
+## Deprecation Notice
+
+Since all of the issues that ApolloAlamofire worked around have been fixed in [Apollo 0.27.0](https://github.com/apollographql/apollo-ios/releases/tag/0.27.0), you're encouraged to update to the latest version of Apollo and rely on those new features instead of using ApolloAlamofire. Thanks to our users and their support during the last few years! ApolloAlamofire is going to be deprecated and its repository archived. Please open an issue if you think there's still a use case for this library.
+
 ## What's This For?
 
 If you used [Apollo iOS](https://github.com/apollographql/apollo-ios) library,
